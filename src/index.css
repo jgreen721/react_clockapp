@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;900&family=Pixelify+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --black: #000000;
+  --lightblack: #303030;
+  --white: #ffffff;
+  --mainFont: "Inter", sans-serif;
+  --funFont: "Pixelify Sans", sans-serif;
+  --mainPaddingX: 16.5rem;
+}
+
+h1 {
+  font-size: 20rem;
+  line-height: 15rem;
+}
+
+h2 {
+  font-size: 5.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.btn {
+  border-radius: 100px;
+  padding: 1rem 2.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1, 1.2);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 1050px) {
+  :root {
+    --mainPaddingX: 6.4rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    --mainPaddingX: 2.4rem;
+  }
+  h1 {
+    font-size: 10rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
