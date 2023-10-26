@@ -25,8 +25,8 @@ function App() {
     //Fetch state data
 
     console.log("fetching data...");
-    // fetchQuote();
-    // fetchLocation();
+    fetchQuote();
+    fetchLocation();
 
     setDayOfYear(findDayOfTheYear(new Date()))
     setDayOfWeek(getDay());
@@ -156,8 +156,12 @@ function App() {
         return weekNumber;
   }
 
+  const toggleFont = ()=>{
+    appRef.current.classList.toggle("secondary")
+  }
+
   return (
-    <div ref={appRef} className="app">
+    <div onClick={toggleFont} ref={appRef} className="app">
       <div className="app-content">
         <section className={showInfo ? "top-section active-info" : "top-section"}>
           <div className={showInfo ? "top-section-row top-section-top-row hide-top-section-top-row" : "top-section-row top-section-top-row"}>

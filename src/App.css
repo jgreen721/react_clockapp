@@ -2,7 +2,7 @@
   max-width: 144rem;
   margin: 0 auto;
   /* border: 2px solid black; */
-  height: 100vh;
+  min-height: 100vh;
   font-family: var(--mainFont);
   color: var(--white);
   text-shadow: 1px 1px 1px var(--black), 1px 1px 5px var(--black);
@@ -10,9 +10,13 @@
   background-size: cover;
 }
 
+/* .secondary {
+  font-family: cursive;
+} */
+
 .app-content {
   /* border: 2px solid red; */
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,17 +34,18 @@
 
 .top-section {
   height: 100%;
+  /* min-height: 100vh; */
   width: 100%;
   /* border: 3px solid green; */
   position: relative;
   transition: 0.5s ease;
   z-index: 15;
   padding: 0rem var(--mainPaddingX);
-  padding-bottom: 8rem;
-  /* display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column; */
+  /* padding-bottom: 8rem; */
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .active-info {
@@ -54,6 +59,7 @@
   /* padding: 4rem 0; */
   /* border: 3px solid purple; */
   transition: 0.5s ease;
+  flex-grow: 1;
 }
 
 .top-section-top-row {
@@ -149,12 +155,13 @@
   position: relative;
   padding: 0rem var(--mainPaddingX);
   transition: 0.5s ease;
-  height: 0%;
+  height: 0px;
   z-index: 15;
   display: flex;
+  /* display: none; */
 }
 
-.bottom-section::after {
+.show-bottom-section::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -168,7 +175,7 @@
   -webkit-backdrop-filter: blur(16px); */
 }
 
-.bottom-section::before {
+.show-bottom-section::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -182,6 +189,7 @@
 
 .show-bottom-section {
   height: 50%;
+  display: flex;
   padding: 4rem var(--mainPaddingX);
 }
 
@@ -225,6 +233,9 @@
 }
 
 @media screen and (max-width: 1050px) {
+  .app-content {
+    height: auto;
+  }
   .top-section {
     /* padding-bottom: 0; */
     /* border: 3px solid red; */
@@ -256,9 +267,13 @@
 }
 
 @media screen and (max-width: 550px) {
-  .top-section {
-    /* padding-bottom: 4rem; */
+  /* .top-section {
+    padding-bottom: 0rem;
     margin-bottom: 4rem;
+  } */
+
+  .app-content {
+    height: 100vh;
   }
   .data-content-card,
   .bottom-section {
